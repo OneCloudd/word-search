@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Word Search</title>
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/index_main.css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
       rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
     />
   </head>
   <body>
@@ -44,70 +43,35 @@
       </div>
 
       <div>
-        <div>Title</div>
-        <div><input type="text" /></div>
-        <div>Description</div>
-        <div><input type="text" /></div>
-        <div>Word List</div>
+        <div id="main-title_text">Title</div>
         <div>
+          <input type="text" id="main-title_input" />
+        </div>
+        <div id="main-Description_text">Description</div>
+        <div>
+          <input type="text" id="main-description_input" />
+        </div>
+        <div id="main-list_text">Word List</div>
+        <div id="main-list_description">
           Between 10 and 30 words. Puzzles are randomly generated using a
           selection of your words at play time.
         </div>
-        <div>
-          <table>
-            <tr>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-            </tr>
-            <tr>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-            </tr>
-            <tr>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-            </tr>
-            <tr>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-            </tr>
-            <tr>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-            </tr>
-            <tr>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-              <td><input type="text" /></td>
-            </tr>
-          </table>
+        <div id="app">
+          <div id="inputContainer"></div>
+        <div id="main-subject_text">Subject</div>
+        <div id="main-radioBtn">
+          <span
+            ><input type="radio" />Myself, family, friends etc&nbsp&nbsp</span
+          >
+          <span><input type="radio" />Non-Personal (recommended)</span>
         </div>
-        <div>Subject</div>
-        <div><input type="radio" />Myself, family, friends etc</div>
-        <div><input type="radio" />Non-Personal (recommended)</div>
-        <div><button type="submit">Submit</button></div>
+
+        <button id="subBtn" onclick="generateWordSearch()">Submit</button>
       </div>
 
-      <div>
-        <div>Instructions</div>
-        <div>
+      <div id="instructions_container">
+        <div id="instructions_text">Instructions</div>
+        <div id="instructions_li">
           <li>
             To create a word search puzzle you must supply a word list of at
             least 10 words.
@@ -136,5 +100,6 @@
     </main>
 
     <footer></footer>
+    <script src="app.js"></script>
   </body>
 </html>
